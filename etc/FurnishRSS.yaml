@@ -1,0 +1,28 @@
+---
+sources:
+  cpan-feed:
+    provider: 'FeedReader'
+    provide_args:
+      url: 'search.cpan.org'
+  #~ intranet:
+    #~ provider: SimpleHtml
+    #~ provider_args:
+      #~ find: "tr td:first-child a:first-child" # some dom traversal
+      #~ map: "attr => 'href'" # either string or array of stings
+  #~ wiki can provide rss on his own?
+  #~ wiki:
+    #~ provider: MediaWiki
+    #~ provide_args:
+      #~ login: "user:pass"
+      #~ url: "http://wikip001.muenchen.de/itm/"
+      #~ api_params: # they might change
+        #~ - excludeXY=1
+        #~ - feedtype=rss
+
+#~ Config options:
+#~ sources: # under sources key you configure all sources as hash
+#~  <FeedName>: # name of the feed
+#~    provider: '<ProviderName>' # has to be a FurnishRSS::Provider
+#~    provider_args: # a config hash passed to the Provider, you may want to look at the Provider dokumentation
+#~      url: '' # possible configuration parameter...
+#~      ...

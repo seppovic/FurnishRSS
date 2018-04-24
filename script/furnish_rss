@@ -1,0 +1,46 @@
+#!/usr/bin/env perl
+# PODNAME: FurnishRSS
+our $VERSION = '1.000';
+
+use strict;
+use warnings;
+
+use FindBin;
+BEGIN { unshift @INC, "$FindBin::Bin/../lib" }
+use Mojolicious::Commands;
+
+# Start command line interface for application
+Mojolicious::Commands->start_app('FurnishRSS');
+
+=pod
+
+=encoding utf8 
+
+=head1 NAME
+
+FurnishRSS -- a Web Application to provide RSS Feeds from all kind of sources.
+
+=head1 SYNOPSIS
+
+  furnish_rss daemon
+  furnish_rss help
+
+=head1 DESCRIPTION
+
+This program loads the FurnishRSS web application,
+a L<Mojolicious> web application. For more detailed help, see
+C<furnish_rss help>.
+
+=head1 SEE ALSO
+
+L<FurnishRSS>, L<Mojolicious>
+
+=head1 AUTHOR
+
+seppovic
+
+=head1 LICENSE
+
+GPLv2
+
+=cut
