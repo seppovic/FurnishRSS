@@ -1,0 +1,18 @@
+% layout 'rss';
+
+% foreach my $item (@{$feed->items}) {  
+  <entry>
+    <id><% $item->src_url %></id>
+    <title><%= $item->title %></title>
+    <link rel="alternate" href="<%= $item->src_url =>" />
+    <updated><%= $item->entry_date %></updated>
+  % if ($item->author) {
+    <author><name><%= $item->author %></name></author>
+  % }
+  % if ($item->summary) {
+    <summary type="html"><![CDATA[
+    %= $item->summary
+    ]]></summary>
+  % }
+  </entry>
+% }

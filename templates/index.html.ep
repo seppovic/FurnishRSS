@@ -1,0 +1,9 @@
+% layout 'default';
+<h1>Feed index</h1>
+<ul>
+% foreach my $feed (keys %{$self->app->{config}->{sources}}) {
+<li>
+<%= link_to 'feed' => {source => $feed} => begin %><%= $feed %><% end %>
+</li>
+% }
+</ul>

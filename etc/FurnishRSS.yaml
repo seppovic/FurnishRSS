@@ -1,4 +1,5 @@
 ---
+# log_file: '' # defaults to "log/FurnishRSS.log"
 sources:
   cpan-feed:
     provider: 'FeedReader'

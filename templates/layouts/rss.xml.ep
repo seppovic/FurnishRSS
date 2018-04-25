@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="<%= asset 'rss.css' =>"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <!-- Required: -->
+  <title><%= $feed->title %></title>
+  <updated><%= $feed->updated =></updated>
+  <id><%= $feed->uuid %></id>
+  <!-- optional: -->
+  <link rel="self" href="<%= url_for('index')->to_abs %>" />
+  <subtitle>furnishRSS generated Feed for: <%= $feed->title %></subtitle>
+  <generator>furnishRSS</generator>
+  <icon>/images/furnishRSS.ico</icon>
+  <!-- Items: -->
+  <%= content %>
+</feed>
+<!-- https://validator.w3.org/feed/docs/atom.html#sampleFeed -->
